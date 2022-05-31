@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function isFibonacci(number){
+        let num1=0;
+        let num2=1;
+        let count=false;
+        for(let i=0; i<=number;i++) {
+            let num3=num1+num2;
+            if(number===num1|| number===num2 || number===num3) {
+                count=true;
+            }
+            num1=num2;
+            num2=num3;
+        }
+        return count;
+
+    }
+    let num = +prompt("nhap so can kiem tra :")
+    let result = isFibonacci(num)
+    document.write(result)
+</script>
+</html>
